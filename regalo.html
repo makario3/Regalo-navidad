@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">  
+<html>
+<head>
+    <meta charset="uft-8"> <!--codificacion para la pagina-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Un pequeño regalo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="container">
+    <div id="night">
+        <main class="main-container">
+            <h1 class="title">¡Feliz Navidad¡</h1>
+          </main>
+          <div class="snow-floor"></div>
+          <script src="index.js"></script>
+
+          <!-- Botón con la imagen -->
+        <button class="image-button" id="btn-abrir-modal">
+            <img src="/imagenes/Arbol.png  " alt="Árbol de Navidad" />
+        </button>
+        
+        <dialog id="modal">
+            <h2>FELIZ NAVIDAD</h2>
+            <p>Que tengas una feliz navidad mi amor precioso. Me gustaría estar contigo para celebrar juntos, pero la distancia me lo impide este año. Te hice este pequeño detalle, espero que te guste mucho ❤️🥰</p>
+            <button id="btn-cerrar-modal">Cerrar</button>
+        </dialog>
+    </div>
+    <script>
+        // Referencias a elementos
+        const modal = document.getElementById('modal');
+        const openButton = document.getElementById('btn-abrir-modal');
+        const closeButton = document.getElementById('btn-cerrar-modal');
+
+        // Mostrar el diálogo
+        openButton.addEventListener('click', () => {
+            modal.showModal();
+        });
+
+        // Cerrar el diálogo
+        closeButton.addEventListener('click', () => {
+            modal.close();
+        });
+    </script>
+</body>
+</html>
